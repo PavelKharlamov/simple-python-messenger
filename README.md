@@ -20,5 +20,7 @@ Created messenger on SkillBox online-webinar
 **DAY 03 - Messenger Interface (PyQT)**
 - [SkillBox](https://live.skillbox.ru/code_int/online/080520) - [YouTube](https://youtu.be/Ev4xtfhY3h0)
 
+# Another resources
 - [Telegram chat](https://t.me/joinchat/Di59WVhwp-01_Os28UFVPQ)
 - [Speaker repository](https://github.com/manchenkoff/skillbox-async-messenger)
+- [Skillbox](https://skillbox.ru/)
