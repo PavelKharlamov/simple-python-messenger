@@ -5,7 +5,7 @@ import asyncio
 from asyncio import transports
 from PySide2.QtWidgets import QMainWindow, QApplication
 from asyncqt import QEventLoop
-from app.interface import Ui_MainWindow
+from app.interface import Ui_Messenger
 
 
 class ClientProtocol(asyncio.Protocol):
@@ -21,14 +21,15 @@ class ClientProtocol(asyncio.Protocol):
         self.window.plainTextEdit.appendPlainText(decoded)
 
     def connection_made(self, transport: transports.Transport):
-        self.window.plainTextEdit.appendPlainText("Вы успешно подключились к серверу. Введите login: <ВАШ_ЛОГИН>")
+        self.window.plainTextEdit.appendPlainText("You have successfully connected.\n"
+                                                  "Enter login: <YOUR_LOGIN>")
         self.transport = transport
 
     def connection_lost(self, exception):
-        self.window.plainTextEdit.appendPlainText("Вы отключены от сервера")
+        self.window.plainTextEdit.appendPlainText("You are disconnected from the server")
 
 
-class Chat(QMainWindow, Ui_MainWindow):
+class Chat(QMainWindow, Ui_Messenger):
     protocol: ClientProtocol
 
     def __init__(self):

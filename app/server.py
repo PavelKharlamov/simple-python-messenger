@@ -23,7 +23,7 @@ class ClientProtocol(asyncio.Protocol):
                 self.login = decoded.replace("login:", "").replace("\r\n", "")
 
                 self.transport.write(
-                    f"Привет, {self.login}!".encode()
+                    f"Hi, {self.login}!".encode()
                 )
                 self.send_history()
         else:
@@ -48,11 +48,11 @@ class ClientProtocol(asyncio.Protocol):
     def connection_made(self, transport: transports.Transport):
         self.transport = transport
         self.server.clients.append(self)
-        print("Соединение установлено")
+        print("Connection success")
 
     def connection_lost(self, exception):
         self.server.clients.remove(self)
-        print("Соединение разорвано")
+        print("Connection lost")
 
 
 class Server:
@@ -73,7 +73,7 @@ class Server:
             "127.0.0.1",
             8080
         )
-        print("Сервер запущен")
+        print("Server is started")
 
         await coroutine.serve_forever()
 
@@ -82,4 +82,4 @@ process = Server()
 try:
     asyncio.run(process.start())
 except KeyboardInterrupt:
-    print("Сервер остановлен вручную")
+    print("Server stopped manually")

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>Messenger</class>
+ <widget class="QMainWindow" name="Messenger">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Messenger</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -21,21 +21,21 @@
        <bool>true</bool>
       </property>
       <property name="placeholderText">
-       <string>Ожидает подключение к серверу</string>
+       <string>Waiting for server connection...</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QLineEdit" name="lineEdit">
       <property name="placeholderText">
-       <string>Введите сообщение...</string>
+       <string>Enter your message...</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QPushButton" name="pushButton">
       <property name="text">
-       <string>Отправить сообщение</string>
+       <string>Send</string>
       </property>
      </widget>
     </item>
